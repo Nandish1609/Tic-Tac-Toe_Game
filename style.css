@@ -1,0 +1,210 @@
+body {
+  font-family: cursive;
+  background-color: #F2F4F8;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+
+.container {
+  width: 100%;
+  max-width: 1080px;
+  margin: 30px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+h1 {
+  color: #1F2937;
+  width: 100%;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-align: center;
+  margin: unset;
+  font-size: 2.5rem;
+}
+
+.symbol-choice {
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.symbol-choice p {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.symbol-choice button {
+  padding: 8px 16px;
+  font-size: 1rem;
+  margin: 0 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #6366F1;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.symbol-choice button:hover {
+  background-color: #4F46E5;
+}
+
+.symbol-choice button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+
+.winner-tab {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  line-height: 1.5;
+  min-height: 1px;
+}
+
+#winner-text {
+  visibility: hidden;
+  color: #10B981;
+  padding-top:10px;
+  transition: visibility 0.3s;
+}
+
+
+p {
+  margin: 0;
+  padding-bottom: 10px;
+  color: #333;
+}
+
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  width: 100%;
+  max-width: 330px;
+  margin: 15px 0;
+  padding: 20px;
+  background-color: #4A5568;
+  border-radius: 5px;
+  border: 1.1px solid #4A5568;
+}
+
+
+.cell {
+  width: 100%;
+  aspect-ratio: 1;
+  background-color: #F2F4F8;
+  font-size: 4rem;
+  border-radius: 5px;
+  display: flex;
+  color: #1976D2;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cell:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00ffc3;
+  background-color: #E0E7FF;
+}
+
+
+.status {
+  font-size: 1.2rem;
+  margin: 10px 0 15px;
+  color: #1F2937;
+}
+
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+#new-game,
+#restart {
+  padding: 10px 20px;
+  font-size: 1rem;
+  min-width: 120px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #FFFFFC;
+  transition: background-color 0.3s ease;
+}
+
+#new-game {
+  background-color: #F2F4F8;
+  
+  
+}
+
+#restart {
+  background-color: #6366F1;
+}
+
+button:hover {
+  background-color: #4F46E5;
+}
+
+
+.footer {
+  padding: 20px;
+  background-color: #6B7280;
+  line-height: 1.5;
+  width: 100%;
+}
+
+.footer p {
+  color: #F2F4F8;
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+
+@media (max-width: 600px) {
+  .board {
+    max-width: 280px;
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .cell {
+    font-size: 2.5rem;
+  }
+
+  .status {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .winner-tab {
+    font-size: 1.5rem;
+  }
+
+  #new-game,
+  #restart {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+    min-width: 100px;
+  }
+}
+
